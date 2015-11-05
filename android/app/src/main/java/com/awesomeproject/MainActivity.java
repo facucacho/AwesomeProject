@@ -11,6 +11,10 @@ import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 
+import com.nick.reactnativemediaplayer.MediaPlayerPackage;  //add new package component framework for media player
+import com.nick.devicecontroller.DeviceControllerPackage;  //add new package component framework for device control
+
+
 public class MainActivity extends Activity implements DefaultHardwareBackBtnHandler {
 
     private ReactInstanceManager mReactInstanceManager;
@@ -25,7 +29,9 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
                 .setApplication(getApplication())
                 .setBundleAssetName("index.android.bundle")
                 .setJSMainModuleName("index.android")
-                .addPackage(new MainReactPackage())
+                .addPackage(new MainReactPackage()) //add new React Native Package for media player
+                .addPackage(new MediaPlayerPackage()) 
+                .addPackage(new DeviceControllerPackage(this))
                 .setUseDeveloperSupport(BuildConfig.DEBUG)
                 .setInitialLifecycleState(LifecycleState.RESUMED)
                 .build();
