@@ -76,7 +76,6 @@ var MovieList = React.createClass({
       }
       text="VIEW"
       >
-      {__DEV__}
       <View style={styles.container}>
       <Image source={{uri: movie.thumbnail}}
       style={styles.thumbnail} />
