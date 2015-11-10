@@ -56,6 +56,7 @@ var MovieList = React.createClass({
     return (
       <View style={styles.container}>
       <Text>
+      {__DEV__}
       Loading movies...
       </Text>
       </View>
@@ -75,6 +76,7 @@ var MovieList = React.createClass({
       }
       text="VIEW"
       >
+      {__DEV__}
       <View style={styles.container}>
       <Image source={{uri: movie.thumbnail}}
       style={styles.thumbnail} />
